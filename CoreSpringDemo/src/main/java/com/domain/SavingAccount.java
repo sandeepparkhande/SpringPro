@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("saving")
 public class SavingAccount implements Account{
 
 	private Double balance=new Double(0.0);
