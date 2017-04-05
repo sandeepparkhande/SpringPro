@@ -4,11 +4,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(value="example.properties")
+@ConfigurationProperties(value="cust")
 public class Customer {
 	private String name;
 	private String city;
-	private String msg;
 	
 	public String getName() {
 		return name;
@@ -26,16 +25,9 @@ public class Customer {
 		this.city = city;
 	}
 
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
 
 	@Override
 	public String toString() {
-		return "Customer [name=" + name + ", city=" + city + ", msg=" + msg + "]";
+		return "Customer [name=" + name + ", city=" + city + "]";
 	}
 }
